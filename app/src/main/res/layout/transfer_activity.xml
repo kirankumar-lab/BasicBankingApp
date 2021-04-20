@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".Transfer"
+    android:background="@color/lightBlue">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/common_gradient">
+
+        <TextView
+            android:id="@+id/tvCustomerDetailsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/prompt"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="@string/transfer"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header">
+
+        <androidx.cardview.widget.CardView
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prompt"
+                    android:text="@string/from"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginStart="10dp" />
+
+                <!-- ===================== Sender Card View==================================-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="7dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="7"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSenCusName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/prompt"
+                            android:gravity="center_horizontal"
+                            android:text="Dipesh Vaghela"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvSenBankName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="State Bank of India"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/prompt"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/account_number"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+                            <TextView
+                                android:id="@+id/tvSenAccNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Account Number"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ifsc_code"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+                            <TextView
+                                android:id="@+id/tvSenIFSCCode"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="IFSC Code"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/tvBalText"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_balance"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/prompt"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:id="@+id/tvSenBal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="10000"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/prompt"
+                                android:textColor="@color/blue"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- ===================== Sender Card View end==================================-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prompt"
+                    android:text="To"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <!-- ===================== Receiver Card View==================================-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="7dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="7"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvRevCusName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/prompt"
+                            android:gravity="center_horizontal"
+                            android:text="Dipesh Vaghela"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvRevBankName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="State Bank of India"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/prompt"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="5dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/account_number"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+                            <TextView
+                                android:id="@+id/tvRevAccNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Account Number"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ifsc_code"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+                            <TextView
+                                android:id="@+id/tvRevIFSCCode"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="IFSC Code"
+                                android:gravity="end"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/prompt"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/tvRevText"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_balance"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/prompt"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:id="@+id/tvRevBal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="10000"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/prompt"
+                                android:textColor="@color/blue"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- ===================== Receiver Card View end==================================-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prompt"
+                    android:text="@string/ammount"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAmmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="@string/enter_ammount"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeColor="@color/blue"
+                    app:boxStrokeWidth="2dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/blue">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/actvAmmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:digits="0123456789."
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/prompt"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardBackgroundColor="@color/blue"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="7dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:onClick="makeTransfer">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/pay"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"/>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
